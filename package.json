@@ -12,6 +12,7 @@
   "dependencies": {
     "@chakra-ui/icons": "^2.1.0",
     "@chakra-ui/system": "^2.6.0",
+    "@emotion/react": "^11.11.1",
     "axios": "^1.4.0",
     "classnames": "^2.3.2",
     "connect": "^3.7.0",

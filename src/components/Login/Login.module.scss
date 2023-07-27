@@ -36,8 +36,14 @@
 		input[type='submit'] {
 			margin: 15px 0 0;
 			border: 0px;
-			background: rgb(83, 83, 83);
+			background: #535353;
 			color: white;
+
+			transition: background .2s ease-in-out;
+
+			&:hover, &:active{
+				background: lighten($color: #535353, $amount: 10);
+			}
 		}
 	}
 }

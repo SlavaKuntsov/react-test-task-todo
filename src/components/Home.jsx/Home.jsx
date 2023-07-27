@@ -13,6 +13,11 @@ import taskAction from '../../redux/actions/task'
 import store from '../../redux/store'
 
 function Home({ userToken }) {
+	window.history.pushState(null, null, window.location.pathname)
+	window.addEventListener('popstate', function () {
+		window.history.pushState(null, null, window.location.pathname)
+	})
+
 	const [menuClick, setMenu] = useState(false)
 
 	const navigate = useNavigate()

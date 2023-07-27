@@ -42,6 +42,16 @@ const Card = ({ task, allTasksArray, userToken, _id }) => {
 
 	const addTask = category => {
 		if (addClick && activeCreate) {
+			setAllTasks([
+				...allTasks,
+				{
+					category: category,
+					name: taskName,
+					text: taskText,
+					status: taskStatus
+				}
+			])
+
 			store.dispatch(
 				taskAction.createTask({
 					postData: {
@@ -53,16 +63,6 @@ const Card = ({ task, allTasksArray, userToken, _id }) => {
 					}
 				})
 			)
-
-			// setAllTasks([
-			// 	...allTasks,
-			// {
-			// 	category: category,
-			// 	name: taskName,
-			// 	text: taskText,
-			// 	status: 'low'
-			// }
-			// ])
 
 			setAddClick(false)
 			setActiveCreate(false)
@@ -97,6 +97,7 @@ const Card = ({ task, allTasksArray, userToken, _id }) => {
 			setTaskText('')
 		}
 		if (removeTask) {
+			setAllTasks(allTasksArray.filter(item => item._id !== _id))
 			store.dispatch(taskAction.removeTask(_id))
 			setRemoveTask(false)
 		}
@@ -218,7 +219,7 @@ const Card = ({ task, allTasksArray, userToken, _id }) => {
 								activeCreate ? style.active : style.inactive
 							}`}
 							onClick={() => {
-								addTask(task)
+								addTask(task) // создание
 							}}
 						>
 							Create

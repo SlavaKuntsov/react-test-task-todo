@@ -36,7 +36,7 @@ function Home({ userToken }) {
 			<div className={style.mainSection}>
 				<nav>
 					<div className={style.name}>
-						<img src='../../../public/vite.svg' alt='avatar' />
+						<img src='/vite.svg' alt='avatar' />
 						{/* <img src='../../../src/assets/react.svg' alt='avatar' /> */}
 						<p>{userToken}</p>
 						{/* <p>email@gmail.com</p> */}

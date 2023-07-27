@@ -1,0 +1,17 @@
+@import "../../scss/responsiveFont.scss";
+
+.logout {
+	box-sizing: border-box;
+	width: 100%;
+	flex-flow: row;
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	background: #d1d5da;
+	padding: 10px 20px;
+	border-radius: 17px;
+	h3{
+		@include responsive-font(16, 14);
+		font-weight: 500;
+	}
+}

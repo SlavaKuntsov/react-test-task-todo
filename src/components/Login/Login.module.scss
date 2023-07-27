@@ -1,0 +1,58 @@
+@import '../../scss/responsiveFont.scss';
+
+.login {
+	flex-flow: column;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+	height: 100%;
+	h1 {
+		color: #020617;
+		font-weight: 600;
+	}
+	p {
+		color: #6d6d6d;
+	}
+	form,
+	div {
+		padding: 50px;
+		margin: 40px 0 0px 0;
+		// box-shadow: 0 20px 25px -5px rgba(95, 95, 95, 0.1), 0 8px 10px -6px rgba(255, 255, 255, 0.1);
+		// box-shadow: 0px 21px 66px 22px rgba(255, 255, 255, 0.2);
+		box-shadow: 0px 10px 22px 5px rgba(145, 145, 145, 0.2);
+		flex-flow: column;
+		display: flex;
+		align-items: center;
+
+		gap: 15px;
+		input {
+			width: 280px;
+			padding: 10px 15px;
+			font-size: 14px;
+			border-radius: 7px;
+			border: 2px solid rgb(229 231 235);
+		}
+		input[type='submit'] {
+			margin: 15px 0 0;
+			border: 0px;
+			background: rgb(83, 83, 83);
+			color: white;
+		}
+	}
+}
+
+@media screen and (width < 500px) {
+	.login {
+		h1 {
+			font-size: 24px;
+		}
+		form{
+			padding: 40px;
+			input{
+				width: 230px;
+				font-size: 12px;
+			}
+		}
+	}
+}

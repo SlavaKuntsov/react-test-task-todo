@@ -1,0 +1,41 @@
+@import '../../scss/responsiveFont.scss';
+
+@media screen and (width >= 1200px) {
+	.sidebar {
+		position: relative;
+		min-width: 280px;
+		max-width: 280px;
+		height: 100%;
+		background: #f8f8fb;
+		flex-flow: column;
+		display: flex;
+		gap: 50px;
+		align-items: center;
+		justify-content: space-between;
+		display: flex;
+		padding: 80px 20px 20px;
+		box-shadow: 1px 2px 11px 0px rgba(148, 148, 148, 0.25);
+		z-index: 20;
+		flex: 1;
+		.category {
+			flex-flow: column;
+			align-items: center;
+			display: flex;
+			gap: 50px;
+			h2{
+				text-transform: capitalize;
+				flex-flow: column;
+				display: flex;
+				gap: 10px;
+				
+			}
+		}
+
+	}
+}
+
+@media screen and (width < 1200px) {
+	.sidebar{
+		display: none;
+	}
+}

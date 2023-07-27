@@ -1,0 +1,198 @@
+@import '../../scss/responsiveFont.scss';
+
+.card {
+	border-radius: 17px;
+	background: #f6f6f6;
+	padding: 20px;
+	display: flex;
+	flex: 1 0 260px;
+	flex-flow: column;
+	gap: 20px;
+	align-self: self-start;
+	.cardInfo {
+		flex-flow: row;
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+
+		h3 {
+			@include responsive-font(19, 18);
+			word-spacing: -4px;
+		}
+
+		svg {
+			background: #b9bbbf;
+			border-radius: 50%;
+		}
+	}
+
+	.allTasks {
+		flex-flow: column;
+		display: flex;
+		gap: 20px;
+		.task {
+			padding: 20px 17px;
+			border-radius: 17px;
+			background: #e0e4ea;
+			flex-flow: column;
+			display: flex;
+			gap: 10px;
+			h4 {
+				@include responsive-font(18, 16);
+				word-spacing: -2px;
+				font-weight: 500;
+				line-height: 20px;
+				text-transform: capitalize;
+				// max-width: 500px;
+			}
+			p {
+				@include responsive-font(16, 14);
+				line-height: 19px;
+				word-spacing: -2px;
+				text-transform: capitalize;
+				word-wrap: break-word;
+				// max-width: 500px;
+			}
+			.status {
+				color: white;
+				@include responsive-font(16, 14);
+				border-radius: 14px;
+				padding: 0 8px;
+				font-weight: 400;
+			}
+			.low {
+				background: #67cb65;
+			}
+			.medium {
+				background: #ff9533;
+			}
+			.high {
+				background: #e74444;
+			}
+			.taskRemove {
+				width: 100%;
+				display: flex;
+				justify-content: end;
+			}
+		}
+		.emptyTask {
+			opacity: 0.5;
+			text-align: center;
+		}
+		.taskInput {
+			padding: 20px 17px;
+			border-radius: 17px;
+			background: #e0e4ea;
+			flex-flow: column;
+			display: flex;
+			gap: 10px;
+
+			.statusSelection {
+				select {
+					background-color: #f5f5f5;
+					color: #333;
+					padding: 10px 20px;
+					border: 1px solid gray;
+					border-radius: 17px;
+					@include responsive-font(15, 13);
+					overflow-x: hidden;
+					overflow-y: auto;
+					min-width: 100%;
+					option {
+						background-color: #f5f5f5;
+						color: #333;
+						padding: 8px;
+						font-size: 16px;
+					}
+				}
+				// .status {
+				// 	color: white;
+				// 	@include responsive-font(16, 14);
+				// 	border-radius: 14px;
+				// 	padding: 3px 8px;
+				// 	font-weight: 400;
+				// }
+				// .low {
+				// 	background: #67cb65;
+				// }
+				// .medium {
+				// 	background: #ff9533;
+				// }
+				// .high {
+				// 	background: #e74444;
+				// }
+				// .taskRemove{
+				// 	width: 100%;
+				// 	display: flex;
+				// 	justify-content: end;
+				// }
+			}
+
+			.taskText,
+			.taskName {
+				padding: 10px 20px;
+				border: 1px solid gray;
+				border-radius: 17px;
+				@include responsive-font(15, 13);
+				overflow-x: hidden;
+				overflow-y: auto;
+				max-width: 100%;
+			}
+			.taskCreate {
+				padding: 10px;
+				text-align: center;
+				color: white;
+				@include responsive-font(18, 16);
+				border-radius: 17px;
+				transition: background 0.2s ease-in-out;
+			}
+			.active {
+				background: #67cb65;
+			}
+			.inactive {
+				background: #e74444;
+			}
+		}
+	}
+}
+
+@media screen and (width > 1200px) {
+	.card {
+		.cardInfo {
+			h3 {
+				@include responsive-font(20, 14);
+				word-spacing: -4px;
+			}
+		}
+		.allTasks {
+			.task {
+				padding: 25px 20px;
+				h4 {
+					@include responsive-font(20, 16);
+					word-spacing: -2px;
+					font-weight: 500;
+					line-height: 20px;
+				}
+				p {
+					@include responsive-font(18, 6);
+					line-height: 23px;
+					word-spacing: -2px;
+				}
+				.status {
+					@include responsive-font(15, 10);
+					padding: 1px 8px;
+				}
+			}
+			.taskInput {
+				input {
+					padding: 10px 20px;
+					@include responsive-font(18, 13);
+				}
+				.taskCreate {
+					padding: 12px;
+					@include responsive-font(20, 16);
+				}
+			}
+		}
+	}
+}
